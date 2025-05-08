@@ -20,9 +20,25 @@
     --overlay-dark-color:rgba(0,0,0,0.6);
 }
 
+header, .category-list
+{
+    position: sticky;
+    z-index: 10;
+    top: 0;
+    background: var(--white-color);
+}
+
+.container
+{
+    display: flex;
+    flex-direction: column;
+    max-height: 100vh;
+}
+
 .navbar
 {
     display: flex;
+    gap: 1.5rem;
     align-items: center;
     padding: .5rem 1rem;
     justify-content: space-between;
@@ -126,6 +142,7 @@
 .main-layout
 {
     display: flex;
+    overflow-y: auto;
 }
 
 .main-layout .content-wrapper {
@@ -155,3 +172,99 @@
     background: var(--light-gray-color);
 }
 
+.category-list .category-button.active
+{
+    color: var(--white-color);
+    background: var(--black-color);
+    pointer-events: none;
+}
+
+.category-list .category-button:hover
+{
+    background: var(--border-color);
+}
+
+.video-list {
+    width: 100%;
+}
+
+.content-wrapper .video-list
+{
+    display: grid;
+    gap: 1rem;
+    padding: 1.25rem 0 4rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.video-list .video-card
+{
+    text-decoration: none;
+}
+
+.video-list .video-card .video-info
+{
+    display: flex;
+    gap: .7rem;
+    padding: .7rem .5rem;
+}
+
+.video-list .video-card .thumbnail-container
+{
+    position: relative;
+}
+
+.video-list .video-card .thumbnail
+{
+    width: 100%;
+    border-radius: .5rem;
+    aspect-ratio: 16 / 9;
+}
+
+.video-list .video-card .duration
+{
+    position: absolute;
+    right: .65rem;
+    bottom: .8rem;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0 .3rem;
+    border-radius: .3rem;
+    background-color: var(--overlay-dark-color);
+}
+
+.video-list .video-card .icon
+{
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+}
+
+.video-list .video-card .title
+{
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--black-color);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.video-list .video-card .title:hover
+{
+    color: var(--primary-color);
+}
+
+
+
+.video-list .video-card p
+{
+    font-size: .875rem;
+    color: var(--secondary-color);
+}
+
+.video-list .video-card .channel-name
+{
+    margin: .25rem 0 .15rem;
+
+}

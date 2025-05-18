@@ -145,6 +145,65 @@ header, .category-list
     overflow-y: auto;
 }
 
+.main-layout .sidebar
+{
+    width: 280px;
+    background: var(--white-color);
+}
+
+.sidebar .link-container
+{
+    overflow-y: auto;
+    height: calc(100vh - 60px);
+    padding: 1rem 0 2rem;
+    scrollbar-color:  transparent transparent;
+}
+
+.sidebar .link-container:hover
+{
+    scrollbar-color: #a6a6a6 transparent; 
+}
+
+.sidebar .link-section .link-item
+{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    white-space: nowarp;
+    font-size: .95rem;
+    text-decoration: none;
+    padding: .37rem .75rem;
+    margin-bottom: .25rem;
+    color: var(--black-color);
+    border-radius:  .5rem;
+}
+
+.sidebar .link-section .link-item:hover
+{
+    background: var(--light-gray-color);
+}
+
+.sidebar .link-section .link-item i 
+{
+    font-size: 1.4rem;
+    margin-right: .63rem;
+}
+
+.sidebar .link-section .section-title
+{
+    font-size: .938rem;
+    font-weight: 650;
+    color: var(--black-color);
+    margin: 1rem 0 .5rem .5rem;
+}
+
+.sidebar .section-separator
+{
+    height: 1.75px;
+    margin: .625rem 0;
+    background: var(--light-gray-color)
+}
+
 .content-wrapper .banner {
     background: var(--white-color);
     padding-left: 0%;
